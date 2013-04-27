@@ -7,6 +7,5 @@
   "Determine whether `subject` is a keyword or not. Returns a
    boolean."
 
-  (if (isinstance subject (type ""))
-    (.startswith subject (first :keyword))
-    False))
+  (and (isinstance subject (type ""))
+       (.startswith subject (first :keyword))))
