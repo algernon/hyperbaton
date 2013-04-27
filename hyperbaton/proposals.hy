@@ -14,3 +14,9 @@
   "Take the first `n` elements of `coll`, and return them as a list."
 
   (list-comp (get coll x) [x (range 0 n)]))
+
+(defn drop [n coll]
+  "Drop the first `n` elements of `coll`, and return the remaining
+  parts as a list."
+
+  (list-comp (get coll x) [x (range n (len coll))]))
