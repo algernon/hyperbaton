@@ -25,10 +25,7 @@
   "Returns true if `n` is a number equal to zero. If `n` is not a
   number, or is not zero, returns False."
 
-  (and (or (isinstance n int)
-           (isinstance n long)
-           (isinstance n float))
-       (not (= (type n) bool))
+  (and (not (= (type n) bool))
        (= n 0)))
 
 (defn empty? [coll]

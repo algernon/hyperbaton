@@ -29,7 +29,7 @@
   "NATIVE: tests the `zero` function."
 
   (assert (= (zero? 0) True))
-  (assert (= (zero? (long 0 )) True))
+  (assert (= (zero? (- (** 2 63) (** 2 63))) True))
   (assert (= (zero? 0.0) True))
   (assert (= (zero? 1) False))
   (assert (= (zero? "foobar") False))
