@@ -35,3 +35,15 @@
   (assert (= (zero? "foobar") False))
   (assert (= (zero? False) False))
   (assert (= (zero? None) False)))
+
+(defn test-empty? []
+  "NATIVE: tests the `empty?` function."
+
+  (assert (= (empty? []) True))
+  (assert (= (empty? [1 2]) False))
+  (assert (= (empty? "") True))
+  (assert (= (empty? "foo") False))
+  (assert (= (empty? {}) True))
+  (assert (= (empty? {:foo :bar}) False))
+  (assert (= (empty? (,)) True))
+  (assert (= (empty? (, 1 2)) False)))

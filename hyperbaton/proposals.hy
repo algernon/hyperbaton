@@ -30,3 +30,8 @@
            (isinstance n float))
        (not (= (type n) bool))
        (= n 0)))
+
+(defn empty? [coll]
+  "Returns true if `coll` is an empty collection."
+
+  (zero? (len coll)))
