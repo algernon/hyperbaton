@@ -9,3 +9,8 @@
 
   (and (isinstance subject (type ""))
        (.startswith subject (first :keyword))))
+
+(defn take [n coll]
+  "Take the first `n` elements of `coll`, and return them as a list."
+
+  (list-comp (get coll x) [x (range 0 n)]))
