@@ -24,3 +24,14 @@
   (assert (= (drop 1 (range 1 10)) (range 2 10)))
   (assert (= (drop 1 "foobar") ["o" "o" "b" "a" "r"]))
   (assert (= (drop 1 (, 1 2 3 4 5)) [2 3 4 5])))
+
+(defn test-zero? []
+  "NATIVE: tests the `zero` function."
+
+  (assert (= (zero? 0) True))
+  (assert (= (zero? (long 0 )) True))
+  (assert (= (zero? 0.0) True))
+  (assert (= (zero? 1) False))
+  (assert (= (zero? "foobar") False))
+  (assert (= (zero? False) False))
+  (assert (= (zero? None) False)))
