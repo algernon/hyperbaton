@@ -10,3 +10,5 @@ will either move from here to elsewhere, or disappear altogether if
 they're deemed unnecessary.
 
  [hylang]: http://hylang.org/
+
+All code herein is under the same license as [Hy][hylang] itself.
