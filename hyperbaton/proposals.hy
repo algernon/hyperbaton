@@ -3,6 +3,8 @@
 ;;
 ;; Licensed under the same terms as Hy itself.
 
+(import [itertools])
+
 (defn keyword? [subject]
   "Determine whether `subject` is a keyword or not. Returns a
    boolean."
@@ -13,7 +15,8 @@
 (defn take [n coll]
   "Take the first `n` elements of `coll`, and return them as a list."
 
-  (list-comp (get coll x) [x (range 0 n)]))
+  (let [[i (iter coll)]]
+    (list (itertools.islice i n))))
 
 (defn drop [n coll]
   "Drop the first `n` elements of `coll`, and return the remaining

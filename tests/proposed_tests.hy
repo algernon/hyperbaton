@@ -15,7 +15,8 @@
 
   (assert (= (take 5 (range 1 100)) (list (range 1 6))))
   (assert (= (take 5 "foobar") ["f" "o" "o" "b" "a"]))
-  (assert (= (take 2 (, 1 2 3 4 5)) [1 2])))
+  (assert (= (take 2 (, 1 2 3 4 5)) [1 2]))
+  (assert (= (take 100 (range 1 2)) (list (range 1 2)))))
 
 
 (defn test-drop []
