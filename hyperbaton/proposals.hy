@@ -15,8 +15,9 @@
 (defn take [n coll]
   "Take the first `n` elements of `coll`, and return them as a list."
 
-  (let [[i (iter coll)]]
-    (list (itertools.islice i n))))
+  (-> (iter coll)
+      (itertools.islice n)
+      list))
 
 (defn drop [n coll]
   "Drop the first `n` elements of `coll`, and return the remaining
