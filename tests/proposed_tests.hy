@@ -1,4 +1,4 @@
-(import [hyperbaton.proposals [*]])
+(require hyperbaton.proposals)
 
 (defn test-keyword? []
   "NATIVE: tests whether the `keyword?` function works appropriately."

@@ -3,21 +3,21 @@
 ;;
 ;; Licensed under the same terms as Hy itself.
 
-(defn keyword? [subject]
+(defmacro keyword? [subject]
   "Determine whether `subject` is a keyword or not. Returns a
    boolean."
 
-  (and (isinstance subject (type ""))
-       (.startswith subject (first :keyword))))
+  (quasiquote (and (isinstance (unquote subject) (type ""))
+                   (.startswith (unquote subject) (first :keyword)))))
 
-(defn zero? [n]
+(defmacro zero? [n]
   "Returns true if `n` is a number equal to zero. If `n` is not a
   number, or is not zero, returns False."
 
-  (and (not (= (type n) bool))
-       (= n 0)))
+  (quasiquote (and (not (= (type (unquote n)) bool))
+                   (= (unquote n) 0))))
 
-(defn empty? [coll]
+(defmacro empty? [coll]
   "Returns true if `coll` is an empty collection."
 
-  (zero? (len coll)))
+  (quasiquote (zero? (len (unquote coll)))))
