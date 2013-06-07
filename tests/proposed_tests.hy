@@ -18,7 +18,6 @@
   (assert (= (take 2 (, 1 2 3 4 5)) [1 2]))
   (assert (= (take 100 (range 1 2)) (list (range 1 2)))))
 
-
 (defn test-drop []
   "NATIVE: tests the `drop` function."
 
